@@ -7,3 +7,31 @@ build-backend = "setuptools.build_meta"
 # For smarter version schemes and other configuration options,
 # check out https://github.com/pypa/setuptools_scm
 version_scheme = "no-guess-dev"
+
+[project]
+name = "volvo-connect"
+version = "0.1.0"
+description = "A Python package for interacting with Volvo Connect API."
+authors = [{name = "Stephan van Rooij", email="github@svrooij.nl"}]
+dependencies = [
+  "microsoft-kiota-abstractions>=1.6.8",
+  "microsoft-kiota-http>=1.6.8",
+  "microsoft-kiota-serialization-json>=1.6.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "flake8",
+  "isort",
+  "mypy",
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+  "pytest-asyncio",
+  "requests-mock",
+  "requests",
+  "setuptools",
+  "twine",
+  "wheel",
+]

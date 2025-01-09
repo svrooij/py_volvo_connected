@@ -8,3 +8,6 @@
 """
 
 # import pytest
+import sys
+if (sys.path[1] != "/workspaces/volvo_connected/src"):
+    sys.path.insert(1, "/workspaces/volvo_connected/src")
