@@ -9,15 +9,15 @@ build-backend = "setuptools.build_meta"
 version_scheme = "no-guess-dev"
 
 [project]
-name = "volvo-connect"
+name = "volvo-connected"
 version = "0.1.0"
 description = "A Python package for interacting with Volvo Connect API."
-authors = [{name = "Stephan van Rooij", email="github@svrooij.nl"}]
+authors = [{name = "Stephan van Rooij", email="github@svrooij.io"}]
 dependencies = [
-  "microsoft-kiota-abstractions>=1.6.8",
-  "microsoft-kiota-http>=1.6.8",
-  "microsoft-kiota-serialization-json>=1.6.8",
+  "microsoft-kiota-bundle>=1.6.8"
 ]
+license = {file = "LICENSE"}
+readme = "README.md"
 
 [project.optional-dependencies]
 dev = [
