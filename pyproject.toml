@@ -10,11 +10,14 @@ version_scheme = "no-guess-dev"
 
 [project]
 name = "volvo-connected"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python package for interacting with Volvo Connect API."
 authors = [{name = "Stephan van Rooij", email="github@svrooij.io"}]
 dependencies = [
-  "microsoft-kiota-bundle>=1.6.8"
+  "microsoft-kiota-abstractions>=1.3.3",
+  "microsoft-kiota-http>=1.3.3",
+  "microsoft-kiota-serialization-json>=1.3.3",
+
 ]
 license = {file = "LICENSE"}
 readme = "README.md"

@@ -1,7 +1,8 @@
 import pytest
 import asyncio
 import pytest_asyncio
-from kiota_bundle.default_request_adapter import DefaultRequestAdapter
+from kiota_http.httpx_request_adapter import HttpxRequestAdapter
+#from kiota_bundle.default_request_adapter import DefaultRequestAdapter
 from kiota_abstractions.authentication import AnonymousAuthenticationProvider
 from os import getenv
 import sys
@@ -11,14 +12,15 @@ if (sys.path[1] != "/workspaces/volvo_connected/src"):
 from volvo_connected import (
   StaticAccessTokenProvider,
   VolvoAuthenticationProvider,
-  VolvoConnectedClient
+  VolvoConnectedClient,
+#   DefaultRequestAdapter
 )
 
 def get_client() -> VolvoConnectedClient:
     vcc: str = getenv("VOLVO_VCC_API_KEY");
     token: str = getenv("VOLVO_TOKEN");
     auth_provider = VolvoAuthenticationProvider(vcc, StaticAccessTokenProvider(token))
-    return VolvoConnectedClient(DefaultRequestAdapter(auth_provider))
+    return VolvoConnectedClient(HttpxRequestAdapter(auth_provider))
 
 def test_no_request_adapter():
     with pytest.raises(TypeError):
