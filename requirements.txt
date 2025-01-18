@@ -1,6 +1,9 @@
-microsoft-kiota-abstractions==1.3.3
-microsoft-kiota-http==1.3.3
-microsoft-kiota-serialization-json==1.3.3
+urllib3==1.26.17
+microsoft-kiota-http @ git+https://github.com/svrooij/kiota-python.git@65852e9720973aaf2201a8efe0723d112a4596ec#subdirectory=packages/http/httpx
+#microsoft-kiota-abstractions==1.8.0
+microsoft-kiota-serialization-json==1.8.0
+#microsoft-kiota-abstractions @ git+https://github.com/svrooij/kiota-python.git@65852e9720973aaf2201a8efe0723d112a4596ec#subdirectory=packages/abstractions
+#microsoft-kiota-serialization-json @ git+https://github.com/svrooij/kiota-python.git@65852e9720973aaf2201a8efe0723d112a4596ec#subdirectory=packages/serialization/json
 
 # I would rather use this bundle, but it has a requirement upon httpx[http2]>=0.28 and urllib3==2.2.2 which is not available in home assistant
 # microsoft-kiota-bundle==1.6.8
