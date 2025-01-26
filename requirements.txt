@@ -1,5 +1,4 @@
-urllib3==1.26.17
-microsoft-kiota-http @ git+https://github.com/svrooij/kiota-python.git@65852e9720973aaf2201a8efe0723d112a4596ec#subdirectory=packages/http/httpx
+microsoft-kiota-http @ git+https://github.com/svrooij/kiota-python.git@7e903ad9cb98cfc397c59dd6cb9526cd68f46ce9#subdirectory=packages/http/httpx
 #microsoft-kiota-abstractions==1.8.0
 microsoft-kiota-serialization-json==1.8.0
 #microsoft-kiota-abstractions @ git+https://github.com/svrooij/kiota-python.git@65852e9720973aaf2201a8efe0723d112a4596ec#subdirectory=packages/abstractions
