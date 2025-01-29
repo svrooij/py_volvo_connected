@@ -4,12 +4,7 @@
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
-	"features": {
-		"ghcr.io/devcontainers-extra/features/poetry:2": {},
-		"ghcr.io/devcontainers-extra/features/pyscaffold:2": {},
-		"ghcr.io/devcontainers-extra/features/ruff:1": {},
-		"ghcr.io/hspaans/devcontainer-features/pytest:1": {}
-	},
+	"features": {	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
