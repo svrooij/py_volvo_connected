@@ -9,7 +9,9 @@ jobs:
   publish:
     name: Publish volvo-connected 📦
     runs-on: ubuntu-latest
-
+    permissions:
+      # IMPORTANT: this permission is mandatory for Trusted Publishing
+      id-token: write
     steps:
     - name: 🧑‍💻 Checkout code
       uses: actions/checkout@v4
@@ -42,10 +44,14 @@ jobs:
     #   run: |
     #     twine upload --non-interactive --skip-existing --disable-progress-bar dist/*
 
-    - name: 📦 Publish package to PyPI
-      env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_TEST_TOKEN }}
-      run: |
-        twine upload --non-interactive --skip-existing --disable-progress-bar dist/*
+    # - name: 📦 Publish package to PyPI
+    #   env:
+    #     TWINE_USERNAME: __token__
+    #     TWINE_PASSWORD: ${{ secrets.PYPI_TEST_TOKEN }}
+    #   run: |
+    #     twine upload --non-interactive --skip-existing --disable-progress-bar dist/*
+    
+    - name: 📦 Publish package to PyPI (using oidc)
+        uses: pypa/gh-action-pypi-publish@release/v1
+
 
